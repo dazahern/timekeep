@@ -1,5 +1,24 @@
-<% @watches.each do |watch| %>
-	<h2><p><%= watch [:name] %></p></h2>
-	<p><%= watch [:brand] %></p>
+<section> class="watches">
 
-<% end %>
+	<% @watches.each do |watch| %>
+
+		<div class="watch"> 
+			<%= link_to watch do %>
+			<!-- IMAGE -->
+				<%= link_to "#" do %>
+					<!-- PRICE -->
+					<div class="price">
+						<span><%= watch.price %></span>
+						
+					</div>
+				<% end %>
+			<% end %>
+
+			<h2><%= watch.name %></h2>
+
+		</div>
+	
+	<% end %>
+
+
+</section>
