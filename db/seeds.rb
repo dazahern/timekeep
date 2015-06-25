@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Watch.create ([
+  		{name: "Backup Black", brand: "Swatch"}, 
+  		{name: "Classical Digital Casio", brand: "Casio"}, 
+  		{name: "1960s Vintage Raketa", brand: "Raketa"}, 
+  		{name: "Max Bill Chronoscope", brand: "Junghans"}
+  	])
