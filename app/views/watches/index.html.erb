@@ -1,4 +1,4 @@
-<section> class="watches">
+<section class="watches">
 
 	<% @watches.each do |watch| %>
 
@@ -8,7 +8,7 @@
 				<%= link_to "#" do %>
 					<!-- PRICE -->
 					<div class="price">
-						<span><%= watch.price %></span>
+						<span><%= number_to_currency watch.price, unit: "£" %></span>
 						
 					</div>
 				<% end %>
