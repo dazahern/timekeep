@@ -8,7 +8,60 @@
 </head>
 <body>
 
-<%= yield %>
+<div class="container">
+
+		<header>
+			<nav>
+					<%= link_to root_path do %>
+						<h1>Time</br>Keep</h1>
+					<% end %>
+			
+				<div class="actions">
+				<%# if logged_in? %>
+						<%= link_to "Tim", "#" %>
+						<%= link_to "Log Out", "#", class: "button" %>
+				<%# else %>
+						<%= link_to "Log In", "#" %>
+						<%= link_to "Sign Up", "#", class: "button" %>
+				<%# end %>
+				</div>
+
+			</nav>
+			
+
+		</header>
+
+	<%= yield %>
+
+</div>
+
+<footer>
+			<div.class="container">
+				<address>
+					<p>Get in touch</p>
+					<p>Exmouth House</p>
+					<p>3-11 Pine Street</p>
+				</address>
+			
+
+				<div>
+					<a href="tel:0208 998 0909>" 0208 998 0909 </a>
+				</div>
+
+				<div>
+				<p><%= mail_to "hello@timekeep.com" %></p>
+				</div>
+
+			<div> class="social"
+				<%# social_link_to :facebook %>
+				<%# social_link_to :twitter %>
+			</div>
+		</div>
+
+</footer>
+
+
+
 
 </body>
 </html>
