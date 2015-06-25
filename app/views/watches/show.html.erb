@@ -1,9 +1,6 @@
-<h1>Watches#show</h1>
-<p>Find me in app/views/watches/show.html.erb</p>
-
-
 <section class="watch_large">
-<!-- IMAGE -->
+	<!-- IMAGE -->
+	<%= image_tag @watch.image.url(:medium) %>
 </section>
 
 
@@ -21,7 +18,7 @@
 			<%= link_to "Delete", "#" %>
 
 		<%# else %>
-			<%= number_to_curreny @watch.price, unit: "£" %>
+			<%= number_to_currency @watch.price, unit: "£" %>
 			<%= link_to "Buy", "#" %>	
 		<%# end %>
 	</div>

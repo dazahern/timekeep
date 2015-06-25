@@ -43,11 +43,15 @@ group :development, :test do
 
 	# Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
+
+	gem 'pry'
+	gem 'pry-rails'
+	gem 'table_print'
 end
 
 gem 'paperclip', '~> 4.2'
 gem 'pg', group: :production
 gem 'rails_12factor'
-
+gem 'simple_form'
 
 ruby '2.2.1'
