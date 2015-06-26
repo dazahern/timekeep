@@ -1,0 +1,14 @@
+<section>
+<H2>Thanks for ordering from timekeep!</h2>
+<h3>Order No #<%= @order.sku %></h3>
+
+<p>Your account has been debited <%= @order.total %>.</p>
+	</br>
+
+<p>Your <em> <%= link_to @order.watch.name, watch_path(@order.watch) %></em> will be dispatched soon.</p>
+
+<div class="watch">
+<%= image_tag @order.watch.image.url(:medium) %>
+</div>
+
+</section>

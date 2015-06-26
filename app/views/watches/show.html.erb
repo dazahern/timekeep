@@ -19,7 +19,7 @@
 
 		<% else %>
 			<b><%= number_to_currency @watch.price, unit: "£" %></b>
-			<%= link_to "Buy", "#", class: "button" %>	
+			<%= link_to "Buy", new_watch_order_path(@watch), data: { no_turbolink: true }, class: "button" %>	
 		<% end %>
 	</div>
 

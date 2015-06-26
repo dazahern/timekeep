@@ -9,7 +9,7 @@
 	<%= image_tag watch.image.url(:thumb) %>
 
 	<p>Uploaded <%= time_ago_in_words watch.created_at %> ago.</p>
-	<p><%= link_to "Purchased #{watch.orders.count}", watch_orders_path(watch) %> times.</p>
+	<p><%# link_to "Purchased #{watch.orders.count}", watch_orders_path(watch) %> times.</p>
 <% end %>
 
 <!-- GROSS PROFIR ON ALL WATCHES -->

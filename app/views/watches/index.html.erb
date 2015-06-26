@@ -6,7 +6,7 @@
 			<%= link_to watch do %>
 			<%= image_tag watch.image.url(:medium) %>
 			<!-- IMAGE -->
-				<%= link_to "#" do %>
+				<%= link_to new_watch_order_path(watch), data: { no_turbolink: true } do %>
 					<!-- PRICE -->
 					<div class="price">
 						<span><%= number_to_currency watch.price, unit: "£" %></span>

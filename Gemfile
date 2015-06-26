@@ -53,5 +53,6 @@ gem 'paperclip', '~> 4.2'
 gem 'pg', group: :production
 gem 'rails_12factor'
 gem 'simple_form'
+gem 'stripe'
 
 ruby '2.2.1'
