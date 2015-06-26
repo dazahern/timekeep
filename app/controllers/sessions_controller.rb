@@ -35,11 +35,11 @@ private
 		
 
 	def email
-		email 		= params[:session][:email]
+		 params[:session][:email]
 	end
 
 	def password
-		password 	= params[:session][:password]
+		params[:session][:password]
 	end
 
 	def redirect_home

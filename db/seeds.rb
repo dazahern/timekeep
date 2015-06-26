@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Watch.all.delete_all
-
+User.all.delete_all
 User.create(
 
   [
@@ -15,19 +15,22 @@ User.create(
       first_name: "Daz",
       last_name: "Ahern",
       username: "Daz",
-      email: "daz@gmail.com"
+      email: "daz@gmail.com",
+      password: "test"
     },
     {
       first_name: "Kerri",
       last_name: "MacFarland",
       username: "KMAC",
-      email: "kerri@gmail.com"
+      email: "kerri@gmail.com",
+      password: "test"
     },
     {
       first_name: "Jon",
       last_name: "Jones",
       username: "JJ",
-      email: "JON@gmail.com"
+      email: "JON@gmail.com",
+      password: "test"
     },
 
 
@@ -42,7 +45,8 @@ Watch.create ([
   			description: "Add a sophisticated touch to every look with BACKUP BLACK (SUOB715). This iconic style sports an easy-to-read dial in clean black with white Arabic numerals, indexes, and a date window. A matching strap in black finishes the look.",
   			pre_owned: false, 
   			price_in_pence: 50000,
-  			gender: "unixex"
+  			gender: "unixex",
+        user: User.find_by(email: "daz@gmail.com")
 
 
   		},
@@ -52,7 +56,8 @@ Watch.create ([
   			description: "Featuring five alarms, the Casio Tough Solar Illuminator is a rugged watch for action men. Water resistant to 100m and featuring a digital date function, this watch is for performance and looks.",
   			pre_owned: true, 
   			price_in_pence: 4050,
-  			gender: "unixex"
+  			gender: "unixex",
+        user: User.find_by(email: "kerri@gmail.com")
 
   		}, 
   		{
@@ -61,7 +66,8 @@ Watch.create ([
   			description: "Raketa mechanical men's watch as seen on the pictures. Elegant and traditional timepiece.Case is gold plated, has roman numbers on dial. Fitted with new glass and brand new genuine leather strap. Diameter is 36 mm (with crown), thickness is 10 mm (including glass) and the strap is 18 mm wide. 17 jewel mechanism is serviced and cleaned by a porfessional watch repairer.",
   			pre_owned: true, 
   			price_in_pence: 12000,
-  			gender: "unixex"
+  			gender: "unixex",
+        user: User.find_by(email: "daz@gmail.com")
 
   		}, 
   		{
@@ -70,7 +76,8 @@ Watch.create ([
   			description: "As one of the most extraordinary designers of the last century, the architect, painter, sculptor and product designer Max Bill left behind an extensive life’s work, including one of the most fascinating watch collections of recent decades.",
   			pre_owned: false, 
   			price_in_pence: 500000,
-  			gender: "m"
+  			gender: "m",
+        user: User.find_by(email: "JON@gmail.com")
   		}
   	])
 
