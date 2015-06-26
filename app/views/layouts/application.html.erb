@@ -17,17 +17,23 @@
 					<% end %>
 			
 				<div class="actions">
-				<%# if logged_in? %>
-						<%= link_to "Tim", "#" %>
-						<%= link_to "Log Out", "#", class: "button" %>
-				<%# else %>
-						<%= link_to "Log In", "#" %>
-						<%= link_to "Sign Up", "#", class: "button" %>
-				<%# end %>
+				<% if logged_in? %>
+						<%= link_to current_user.first_name, user_path(current_user.id) %>
+						<%= link_to "Log Out", session_path, method: :delete, class: "button" %>
+				<% else %>
+						<%= link_to "Log In", new_session_path %>
+						<%= link_to "Sign Up", new_user_path, class: "button" %>
+				<% end %>
 				</div>
 
 			</nav>
-			
+			<!-- Include User Feedback Code. -->
+			<% flash.each do |key, value| %>
+				<div class="flash <%= key %>">
+					<p><%= value %></p>
+
+				</div>
+			<% end %>
 
 		</header>
 
