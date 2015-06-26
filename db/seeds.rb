@@ -29,7 +29,7 @@ User.create(
       first_name: "Jon",
       last_name: "Jones",
       username: "JJ",
-      email: "JON@gmail.com",
+      email: "jon@gmail.com",
       password: "test"
     },
 
@@ -77,7 +77,7 @@ Watch.create ([
   			pre_owned: false, 
   			price_in_pence: 500000,
   			gender: "m",
-        user: User.find_by(email: "JON@gmail.com")
+        user: User.find_by(email: "jon@gmail.com")
   		}
   	])
 
