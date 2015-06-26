@@ -38,6 +38,7 @@ class WatchesController < ApplicationController
     require_owner(@watch)
     if @watch.update(watch_params)
       flash[:success] = "#{@watch.name} successfully updated."
+      redirect_to @watch
       else
         flash[:error] = "Please check the form for errors and try again."
         render :edit
